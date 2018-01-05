@@ -45,9 +45,19 @@ class EmojiTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "emojiSegue", sender: nil)
+        performSegue(withIdentifier: "emojiSegue", sender: emojis[indexPath.row])
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // get a reference to the specific view controller so we can
+        //  access the custom properties
+        let emojiVC = segue.destination as! EmojiViewController
+        
+        emojiVC.emoji = sender as! String
+        
+    }
     
  }
 
