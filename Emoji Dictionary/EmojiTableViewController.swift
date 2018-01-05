@@ -11,24 +11,19 @@ import UIKit
 class EmojiTableViewController: UITableViewController {
 
     // Ctrl-command space for emoji pop-up
-    var emojis = ["😊", "💩", "🏎", "⛪️", "🍎", "🥑"]
+    var emojis : [Emoji] = []
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        emojis = createEmojis()
     }
 
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return emojis.count
     }
 
@@ -36,8 +31,10 @@ class EmojiTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "emojiCell", for: indexPath)
 
+        let emoji = emojis[indexPath.row]
+        
         // Configure the cell...
-        cell.textLabel?.text = emojis[indexPath.row]
+        cell.textLabel?.text = "\(emoji.theEmoji) \(emoji.name)"
         
         return cell
     }
@@ -55,8 +52,61 @@ class EmojiTableViewController: UITableViewController {
         //  access the custom properties
         let emojiVC = segue.destination as! EmojiViewController
         
-        emojiVC.emoji = sender as! String
+        emojiVC.emoji = sender as! Emoji
         
+    }
+    
+    func createEmojis() -> [Emoji] {
+        
+        let smiley = Emoji()
+        smiley.theEmoji = "😊"
+        smiley.name = "Smiley"
+        smiley.description = "A happy smiling face"
+        smiley.birthYear = 2010
+        smiley.category = "Faces"
+        
+        
+        let avocado = Emoji()
+        avocado.theEmoji = "🥑"
+        avocado.name = "Avocado"
+        avocado.description = "A nice ripe avocado"
+        avocado.birthYear = 2017
+        avocado.category = "Food"
+        
+        
+        let car = Emoji()
+        car.theEmoji = "🏎"
+        car.name = "Race Car"
+        car.description = "A red racing car"
+        car.birthYear = 2012
+        car.category = "Vehicles"
+        
+        
+        let church = Emoji()
+        church.theEmoji = "⛪️"
+        church.name = "Church"
+        church.description = "A white church with stained glass"
+        church.birthYear = 2010
+        church.category = "Buildings"
+        
+        
+        let apple = Emoji()
+        apple.theEmoji = "🍎"
+        apple.name = "Apple"
+        apple.description = "A red apple with green leaves"
+        apple.birthYear = 2010
+        apple.category = "Food"
+        
+        
+        let poop = Emoji()
+        poop.theEmoji = "💩"
+        poop.name = "Poop"
+        poop.description = "A smiling pile of poop"
+        poop.birthYear = 2011
+        poop.category = "Funny"
+    
+        
+        return [smiley, avocado, car, church, apple, poop]
     }
     
  }

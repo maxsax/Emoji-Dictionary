@@ -60,29 +60,56 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A race car sponsored by Swift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5E-ds-rAC">
                                 <rect key="frame" x="10" y="747" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year: 2012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm7-jW-a70">
+                                <rect key="frame" x="126.66666666666669" y="718" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Transportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQu-lg-nQ1">
+                                <rect key="frame" x="91.666666666666686" y="689" width="192" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Race Car" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EX-0Q-t4m">
+                                <rect key="frame" x="125.33333333333334" y="642.66666666666663" width="125.33333333333334" height="38.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="g5E-ds-rAC" firstAttribute="top" secondItem="Fm7-jW-a70" secondAttribute="bottom" constant="8" id="338-Sb-FOJ"/>
+                            <constraint firstItem="LQu-lg-nQ1" firstAttribute="top" secondItem="8EX-0Q-t4m" secondAttribute="bottom" constant="8" id="BrI-wx-9cd"/>
                             <constraint firstItem="SpJ-uE-R8Q" firstAttribute="bottom" secondItem="g5E-ds-rAC" secondAttribute="bottom" constant="10" id="D6K-nK-JJF"/>
+                            <constraint firstItem="8EX-0Q-t4m" firstAttribute="centerX" secondItem="vCC-FE-VtZ" secondAttribute="centerX" id="Kus-xK-dRB"/>
                             <constraint firstItem="Tv4-ei-aPr" firstAttribute="centerX" secondItem="vCC-FE-VtZ" secondAttribute="centerX" id="Sfk-iM-EYJ"/>
                             <constraint firstItem="SpJ-uE-R8Q" firstAttribute="trailing" secondItem="g5E-ds-rAC" secondAttribute="trailing" constant="10" id="YnT-LV-DOg"/>
                             <constraint firstItem="g5E-ds-rAC" firstAttribute="leading" secondItem="SpJ-uE-R8Q" secondAttribute="leading" constant="10" id="aSE-wk-qcF"/>
                             <constraint firstItem="Tv4-ei-aPr" firstAttribute="top" secondItem="SpJ-uE-R8Q" secondAttribute="top" constant="16" id="bx7-Sz-dxC"/>
+                            <constraint firstItem="LQu-lg-nQ1" firstAttribute="centerX" secondItem="vCC-FE-VtZ" secondAttribute="centerX" id="gWU-BT-izZ"/>
+                            <constraint firstItem="Fm7-jW-a70" firstAttribute="centerX" secondItem="vCC-FE-VtZ" secondAttribute="centerX" id="xFl-jU-tdt"/>
+                            <constraint firstItem="Fm7-jW-a70" firstAttribute="top" secondItem="LQu-lg-nQ1" secondAttribute="bottom" constant="8" id="yID-jz-GvP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SpJ-uE-R8Q"/>
                     </view>
                     <connections>
+                        <outlet property="birthLabel" destination="Fm7-jW-a70" id="0pu-2t-AfT"/>
+                        <outlet property="categoryLabel" destination="LQu-lg-nQ1" id="aFU-Zy-giY"/>
                         <outlet property="emojiDefinitionLabel" destination="g5E-ds-rAC" id="nbA-7g-Gmy"/>
                         <outlet property="emojiLabel" destination="Tv4-ei-aPr" id="ikS-OG-F2X"/>
+                        <outlet property="nameLabel" destination="8EX-0Q-t4m" id="DoG-pw-sbW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzv-KE-hdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782.608695652174" y="116.57608695652175"/>
+            <point key="canvasLocation" x="1781.5999999999999" y="116.00985221674877"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4kk-al-yi7">

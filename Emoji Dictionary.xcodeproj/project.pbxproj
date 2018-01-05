@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C776DB61FFFE990006E474F /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C776DB51FFFE990006E474F /* Emoji.swift */; };
 		4CD1CFD11FFF0ACB00C66128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD1CFD01FFF0ACB00C66128 /* AppDelegate.swift */; };
 		4CD1CFD61FFF0ACB00C66128 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD1CFD41FFF0ACB00C66128 /* Main.storyboard */; };
 		4CD1CFD81FFF0ACB00C66128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD1CFD71FFF0ACB00C66128 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C776DB51FFFE990006E474F /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		4CD1CFCD1FFF0ACB00C66128 /* Emoji Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD1CFD01FFF0ACB00C66128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD1CFD51FFF0ACB00C66128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				4CD1CFD71FFF0ACB00C66128 /* Assets.xcassets */,
 				4CD1CFD91FFF0ACB00C66128 /* LaunchScreen.storyboard */,
 				4CD1CFDC1FFF0ACB00C66128 /* Info.plist */,
+				4C776DB51FFFE990006E474F /* Emoji.swift */,
 			);
 			path = "Emoji Dictionary";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				4CD1CFE51FFF1E1100C66128 /* EmojiViewController.swift in Sources */,
 				4CD1CFE31FFF0D1800C66128 /* EmojiTableViewController.swift in Sources */,
+				4C776DB61FFFE990006E474F /* Emoji.swift in Sources */,
 				4CD1CFD11FFF0ACB00C66128 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

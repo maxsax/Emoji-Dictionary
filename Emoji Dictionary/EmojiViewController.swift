@@ -10,33 +10,29 @@ import UIKit
 
 class EmojiViewController: UIViewController {
 
+    
+    // Outlets
     @IBOutlet weak var emojiLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var birthLabel: UILabel!
     @IBOutlet weak var emojiDefinitionLabel: UILabel!
     
-    var emoji = ""
+    
+    // Properties
+    var emoji = Emoji()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Copy the emoji to the large label
-        emojiLabel.text = emoji
+        emojiLabel.text = emoji.theEmoji
+        nameLabel.text = emoji.name
+        emojiDefinitionLabel.text = emoji.description
+        birthLabel.text = "Birth Year: \(emoji.birthYear)"
+        categoryLabel.text = "Category: \(emoji.category)"
         
-        // Put the right definition in the bottom label
-        if emoji == "😊" {
-            emojiDefinitionLabel.text = "A happy smiley face!"
-        } else if emoji == "💩" {
-            emojiDefinitionLabel.text = "A smiling pile of poop!"
-        } else if emoji == "🏎" {
-            emojiDefinitionLabel.text = "A race car sponsored by Swift"
-        } else if emoji == "⛪️" {
-            emojiDefinitionLabel.text = "A church with stained glass"
-        } else if emoji == "🍎" {
-            emojiDefinitionLabel.text = "A red apple with a green leaf"
-        } else if emoji == "🥑" {
-            emojiDefinitionLabel.text = "Half of an avocado"
-        } else {
-            emojiDefinitionLabel.text = "I don't know what this is!?!"
-        }
     }
 
 }
